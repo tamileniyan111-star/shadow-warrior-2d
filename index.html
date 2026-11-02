@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Shadow Warrior 2D</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="gameShell">
+      <canvas id="gameCanvas" width="1280" height="720" aria-label="Shadow Warrior 2D game canvas"></canvas>
+
+      <div id="touchControls" class="touch-controls">
+        <button class="btn left" data-action="left" aria-label="Move left">◀</button>
+        <button class="btn right" data-action="right" aria-label="Move right">▶</button>
+        <button class="btn jump" data-action="jump" aria-label="Jump">▲</button>
+        <button class="btn attack" data-action="attack" aria-label="Attack">✦</button>
+      </div>
+
+      <div id="menuOverlay" class="overlay">
+        <div class="panel">
+          <div class="title">SHADOW WARRIOR 2D</div>
+          <div class="subtitle">Forest, caves, and castle battle await.</div>
+          <div class="menu-row">
+            <button id="startBtn" class="menu-btn">Start Adventure</button>
+          </div>
+          <div class="controls-list">
+            <div><strong>Move:</strong> A / D or Arrow Keys</div>
+            <div><strong>Jump:</strong> W / ↑ / Space</div>
+            <div><strong>Attack:</strong> J / K / Enter</div>
+            <div><strong>Pause:</strong> P</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="pauseOverlay" class="overlay hidden">
+        <div class="panel compact">
+          <div class="title small">Paused</div>
+          <div class="subtitle">Take a breath before the next fight.</div>
+          <div class="menu-row">
+            <button id="resumeBtn" class="menu-btn secondary">Resume</button>
+            <button id="restartBtn" class="menu-btn">Restart</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="gameOverOverlay" class="overlay hidden">
+        <div class="panel compact">
+          <div id="gameOverTitle" class="title small">Game Over</div>
+          <div id="gameOverText" class="subtitle">The shadows were too strong this time.</div>
+          <div class="menu-row">
+            <button id="retryBtn" class="menu-btn">Retry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
